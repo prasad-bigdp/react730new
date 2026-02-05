@@ -1,0 +1,37 @@
+Hook: Hooks are pre defined functions in react from version 16. These hooks 
+      i. holds the state (useState)
+      ii.  run side effects (useEffect)
+      iii. access life cycle behaviour
+      iv. integrate with concurrent rendering
+hooks must be presented at top level because react them by call order
+main/popular hooks we use:
+i. useState: its purpose is to make state of a value and maintains it. state is mutable
+    const [value,setValue]= usestate(initialValue)
+value contains intially initialValue and setValue is a function that is used to change/replace the value
+state is asynchronous so the next synchronous lines will run first
+ eg:
+ const [value,setValue]=useState(0)
+ setValue(5)
+ console.log(value)
+
+ii. useEffect: it is used to run side effects /async functions such as api calls, timers or cleanup logic
+useEffect(callbackfunction,dependencyArray)
+empty dependencyArray -- run once
+dependencyArray with values -- run at starting and everytime the state of those values changes
+no dependencyArray -- run at starting and everytime , any value state changes
+
+iii. useMemo : it is used to memorize or cache expensive calculations
+useMemo(callbackfunction,dependencyArray)
+This should be used for strict calculations
+
+iv.useCallback: it is used to cache functions.it maintans the stable identity  of functions.
+it is useful when passing callbacks to memorized childern
+it is also useful to safeguard from re render for childern dependencies
+useCallback(callbackfunction,dependencyArray)
+
+v.useRef : it is used to do DOM manipulation. it assumes reference for every element of DOM.
+Mainly used to store valuees,counters,flags,timers etc..,
+
+
+
+

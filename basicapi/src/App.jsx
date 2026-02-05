@@ -15,7 +15,7 @@ function App ()
 				BAsic API
 			</header>
 			<main className='my-5 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
-				{data &&
+				{data.recipes &&
 					data.recipes.map((r) => (
 						<div className='p-5 flex flex-col justify-between rounded-2xl shadow shadow-amber-200'>
 							<img
