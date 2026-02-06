@@ -33,5 +33,7 @@ v.useRef : it is used to do DOM manipulation. it assumes reference for every ele
 Mainly used to store valuees,counters,flags,timers etc..,
 
 
+React Compiler(started from React 19)handles both useMemo and useCallback by default , so there is no need of them if react compiler is there.
+
 
 

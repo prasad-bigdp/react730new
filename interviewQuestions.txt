@@ -1,0 +1,12 @@
+1. what is React JS? What are its advantages?
+2. How React Js is different from React Native?
+3. What is component? How React Handles Components?
+4. what is Jsx and what are its rules?
+5. what is nested component?
+6. what are props? How do you send a value from parent component to child component and how do you receive them?
+7. what is state and How do you manage state in React?
+8. what is Virtual DOM and How React Works With it?
+9. What are API,promise,async await and fetch?
+10. Explain How React Handles API's . Explain useEffect in detail
+11. How to send data from child component to parent component?
+12. what is usecallback and what is useMemo?
