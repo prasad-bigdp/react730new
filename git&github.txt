@@ -16,3 +16,10 @@ Local Repository:
     3. git add filenames or git add .     (it will add files to git so that git will track them for changes -- staging Area)
     Everytime you changed something git understands it because it has a copy in staging area. so after reasonable changes better repeat step 3 again
     4. git commit -m "you have write what changed you did in message"
+
+Remote/cloud Repository:
+   5. git remote add origin "your repo link" 
+   6. git push -u origin main
+
+
+
