@@ -7,9 +7,9 @@ React Course
       components, state,props, virtual DOM,
       useState,useEffect hooks
       class vs functional components
-      useContext, useMemo,useCallback,useRef
+      Context API(useContext), useMemo,useCallback,useRef
       Forms, events
-      state management
+      state management(redux)
       React Routing
       Major project on React
 

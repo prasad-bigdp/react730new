@@ -1,0 +1,65 @@
+Redux: Redux is a Predictable state management library of Javascript. it can be used with react or angular or vue or even vanilla Javascript.
+Majority of the times it is used with react
+
+  In small apps, individual component state is enough but when application grows multiple components may need to access same data . For that we need to use Global state logic using Redux
+
+REDUX has three Principles
+1.  single source of truth:
+      Whole application state is stored in one single object inside a store
+    {
+        users:{name:"John"},
+        cart:[],
+        count:0
+    }
+
+2. state is Read only :
+       You cannot modify the state directly . Instead you dispatch an action describing what happend
+
+3. changes are made with Pure functions(any functions that does change what it receives) :
+It uses Pure functions named Reducers that 
+     --> Takes current state
+     --> Take an action
+     --> Return new state
+
+How to do?
+  step1: npm install redux react-redux
+  step2: create actions,reducer and store
+  Actions are function that returns an object which contains type , payload etc.., They basically tells redux what just happened
+  export const increment = () => {
+	return {
+		type: "INCR",
+	}
+}
+export const decrement = () => {
+	return {
+		type: "DECR",
+	}
+}
+
+REDUCERS are pure function that accepts state and action and returns a new state. it never modifies exisiting state .
+store contains reducers . we can create store using createStore
+const initialState = {
+    count:0
+}
+const counterReducer = (state=initialState, action) =>
+{
+    switch (action.type)
+    {
+        case "INCR": return { ...state, count:state.count+1}
+        case "DECR": return { ...state, count: state.count - 1 }
+            default: return state
+    }
+}
+export default counterReducer
+store.js:  import { createStore } from 'redux'
+import counterReducer from './reducer'
+const store = createStore(counterReducer);
+export default store;
+
+step4. Provide the store globally using Provider
+
+step5: implement UI with useDipatch and useSelector hooks:
+
+
+
+

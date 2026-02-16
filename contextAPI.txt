@@ -1,0 +1,31 @@
+Prop Drilling: Prop Drilling is a Probelm that states passing a value from outer component to inner component goes through multiple middle components even though those components are not using the value
+eg: APP ---> Header ---> Navbar --->userProfile.jsx
+if App want to send user data
+<App user={user} /> --> <Header user={user} /> ---> <Navbar user={user} />
+ ---><UserProfile user={user} />
+
+ This becomes probelmatic and messy in large applications
+Context solves this by allowing components to access shared data directly using global containers
+
+How to do?
+  step1: create the Context
+     import {createContext} from 'react'
+   export  const userContext = createContext();
+
+  step 2: provide this context to whole application with values
+  <UserContext.Provider value="John">
+     <App />
+  </UserContext.Provider />
+
+  step 3: use/consume the context value in any component
+   import {useContext} from 'react'
+   import {userContext}
+   function UserProfile(){
+    const user= useContext(userContext)
+    return (
+        <h2>Name:{user} <h2/>
+    )
+   }
+
+
+

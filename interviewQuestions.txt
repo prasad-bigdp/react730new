@@ -10,3 +10,16 @@
 10. Explain How React Handles API's . Explain useEffect in detail
 11. How to send data from child component to parent component?
 12. what is usecallback and what is useMemo?
+13. what are controlled components and uncontrolled components?
+14. what is useRef and explain with an example
+15. what is an event? How to handle events in React?
+16. How to handle forms in React with validation
+17. what are the best third party libraries needed in react?
+18. what is Routing? and how to do basic routing in React?
+19. what is the differnce between anchor tag and Link tag?
+20. what is useNavigate, useParams and useSearchParams?
+21. How to handle child routing and notfound page routing?
+22. what is prop drilling and How to solve that?
+23. Explain context API with an example
+24. what is Redux and what are its three Principles?
+25. Explain Redux Architecture.
